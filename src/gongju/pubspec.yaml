@@ -30,6 +30,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  image_picker: ^0.8.4
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -62,6 +63,15 @@ flutter:
   assets:
     - assets/images/kakaologo.png
     - assets/images/googlelogo.png
+    - assets/images/home.png
+    - assets/images/around.png
+    - assets/images/chatting.png
+    - assets/images/mypage.png
+    - assets/images/place.jpg
+    - assets/images/money.png
+    - assets/images/caches.png
+    - assets/images/wallet.png
+    - assets/images/camera.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
