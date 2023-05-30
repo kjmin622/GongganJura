@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gongju/detailpage.dart';
 import 'package:gongju/placeregister.dart';
+import 'package:gongju/searchpage.dart';
 
 class ListPage extends StatelessWidget {
   @override
@@ -8,12 +9,38 @@ class ListPage extends StatelessWidget {
     List<String> titles = <String>['의류, 신발, 가전제품 보관 가능해요','가전제품 보관 가능합니다','의류 보관 가능합니다','신발 보관 가능합니다','의류 보관 가능합니다','의류, 신발, 가전제품 보관 가능해요'];
     return Scaffold(
       appBar: AppBar(
+        elevation: 1,
         automaticallyImplyLeading: false,
         backgroundColor: Colors.white,
-        title: const TextField(
-          decoration: InputDecoration(
-            hintText: '내 주변 공간 검색',
-            prefixIcon: Icon(Icons.search),
+        title: GestureDetector(
+          onTap: (){
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => SearchPage()),
+            );
+          },
+          child: Container(
+            padding: EdgeInsets.only(top:7,bottom:7),
+            decoration: BoxDecoration(
+              color: Colors.grey[200],
+              borderRadius: BorderRadius.circular(10),
+            ),
+            child: Row(
+              children: [
+                SizedBox(width:10),
+                Icon(Icons.search, color: Colors.grey[700]),
+                Text(
+                  " 내 주변 공간 탐색",
+                  style: TextStyle(
+                    color: Colors.grey[700],
+                  ),
+                ),
+              ]
+            ),
+            // decoration: InputDecoration(
+            //   hintText: '내 주변 공간 검색',
+            //   prefixIcon: Icon(Icons.search),
+            // ),
           ),
         ),
       ),
